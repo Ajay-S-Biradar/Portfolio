@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      name:['Lilita One']
+    }
   },
   plugins: [],
 }
