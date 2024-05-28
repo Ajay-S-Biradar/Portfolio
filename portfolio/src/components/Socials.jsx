@@ -2,7 +2,7 @@ import React from 'react'
 import { socialItems } from '../svg/socials'
 import { motion } from 'framer-motion'
 
-const Socials = () => {
+const Socials = ({color}) => {
   return (
     <div className='fixed z-20 flex flex-col bottom-0 items-center justify-center mx-8 gap-6'>
       <div className='flex flex-col gap-6'>
@@ -10,7 +10,7 @@ const Socials = () => {
           <motion.svg
             key={index}
             className="w-8 h-8"
-            fill="#fcf6f4"
+            fill={`${color=="#000000"?"#000000":"#fcf6f4"}`}
             viewBox="0 0 24 24"
             aria-hidden="true"
             initial={{ scale: 0 }}
@@ -22,7 +22,7 @@ const Socials = () => {
         ))}
       </div>
       <motion.div
-        className='bg-[#fcf6f4] w-[3px]'
+        className={`" w-[3px] "${color=="#000000"?" bg-[#000000] ":" bg-[#fcf6f4] "}`}
         initial={{ height: 0 }}
         animate={{ height: 150 }}
         transition={{ ease: "easeInOut", duration: 1.5 }}

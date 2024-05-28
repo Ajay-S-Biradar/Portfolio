@@ -3,9 +3,9 @@ import { Outlet, RouterProvider, createBrowserRouter, useLocation, useOutlet } f
 import Home from './pages/Home';
 import Socials from './components/Socials';
 import Navbar from './components/Navbar';
-import Works from './pages/Works';
-import { AnimatePresence } from 'framer-motion';
 import MySkills from './pages/MySkills';
+import { AnimatePresence } from 'framer-motion';
+import MyWorks from './pages/Works';
 import AboutMe from './pages/AboutMe';
 import React from 'react';
 
@@ -15,7 +15,6 @@ const AppLayout = () => {
   return (
     <>
       <Navbar />
-      <Socials />
       <AnimatePresence mode="wait" initial={true}>
         {element && React.cloneElement(element, { key: location.pathname })}
       </AnimatePresence>
@@ -34,7 +33,7 @@ const AppRouter = createBrowserRouter([
       },
       {
         path: '/works',
-        element: <Works />
+        element: <MyWorks />
       },
       {
         path: '/skills',
