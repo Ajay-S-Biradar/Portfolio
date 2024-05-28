@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const Socials = () => {
   return (
-    <div className='fixed flex flex-col bottom-0 items-center justify-center mx-8 gap-6'>
+    <div className='fixed z-20 flex flex-col bottom-0 items-center justify-center mx-8 gap-6'>
       <div className='flex flex-col gap-6'>
         {socialItems.map((item, index) => (
           <motion.svg

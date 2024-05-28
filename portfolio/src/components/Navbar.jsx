@@ -62,9 +62,10 @@ const Navbar = () => {
                     }
                 },
                 pause:{
-                    rotate:[0, 360],
+                    rotate:[],
                     transition:{
-                        duration:0
+                        duration:1,
+                        ease:"easeIn"
                     }
                 }
             }}

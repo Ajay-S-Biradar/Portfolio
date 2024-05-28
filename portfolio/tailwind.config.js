@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      name:['Lilita One']
+      name:['Lilita One'],
+      work:['Edu TAS Beginner']
     }
   },
   plugins: [],
