@@ -54,7 +54,7 @@ const Navbar = () => {
 
     return (
         <>
-        <div className='absolute flex justify-between w-full overflow-hidden'>
+        <div className='absolute z-40 flex justify-between w-full overflow-hidden'>
             <Link to={'/'}>
             <h1 className='font-name text-4xl mx-8 my-5 p-3' style={{ color: color }}>AB</h1>
             </Link>

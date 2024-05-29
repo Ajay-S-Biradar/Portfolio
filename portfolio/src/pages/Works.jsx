@@ -33,7 +33,7 @@ const MyWorks = () => {
           </div>
         {Works.map((work,key)=>{
           return(
-            <WorkCard key={key} work={work} />
+            <WorkCard key={key} work={work} time={key} />
           )
         })}
         <div className='w-80 '>

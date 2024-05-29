@@ -1,15 +1,28 @@
 import React, { act, useState } from 'react'
+import { motion } from 'framer-motion';
 
-const WorkCard = ({work}) => {
+const WorkCard = ({work,time}) => {
     const {title,desp,hashTags} = work;
+    console.log(time);
     const [active,setActive] = useState(false);
   return (
-    <div className={`${active?"bg-black ":"bg-[#fcf6f4] "} ' flex justify-evenly flex-col w-80 border border-[#fcf6f4] rounded-bl-[20%] rounded-tr-[20%] h-96 m-2 px-6 py-4 '`}
+    <motion.div 
+    className={`${active?"bg-black ":"bg-[#fcf6f4] "} ' flex justify-evenly flex-col w-80 border border-[#fcf6f4] rounded-bl-[20%] rounded-tr-[20%] h-96 m-2 px-6 py-4 '`}
         onMouseEnter={()=>{
             setActive(true);
         }}
         onMouseLeave={()=>{
             setActive(false);
+        }}
+        initial={{
+            scale:0
+        }}
+        animate={{
+            scale:1
+        }}
+        transition={{
+            duration:(time*1+1),
+            ease:"easeInOut"
         }}
     >
         <div className='flex justify-center w-full'>
@@ -28,7 +41,7 @@ const WorkCard = ({work}) => {
                 return <h3 key={ind} className={`" font-semibold "${active?" text-[#fcf6f4] ":"text-black "}`}>{hash}</h3>
             })}
         </div>
-    </div>
+    </motion.div>
   )
 }
 
