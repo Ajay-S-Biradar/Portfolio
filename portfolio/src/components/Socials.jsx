@@ -1,12 +1,14 @@
 import React from 'react'
 import { socialItems } from '../svg/socials'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const Socials = ({color}) => {
   return (
     <div className='fixed z-20 flex flex-col bottom-0 items-center justify-center mx-8 gap-6'>
       <div className='flex flex-col gap-6'>
         {socialItems.map((item, index) => (
+          <a href={item.link} target='_blank' >
           <motion.svg
             key={index}
             className="w-8 h-8"
@@ -19,6 +21,7 @@ const Socials = ({color}) => {
           >
             <path fillRule="evenodd" d={item.d} clipRule="evenodd" />
           </motion.svg>
+          </a>
         ))}
       </div>
       <motion.div
