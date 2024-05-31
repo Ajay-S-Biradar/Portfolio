@@ -60,7 +60,7 @@ const Navbar = () => {
             </Link>
             <motion.div
                 onClick={handleClick}
-                className='h-10 md:h-32 m-2 md:m-5'
+                className='h-10 md:h-24 m-2 md:m-5'
                 initial={{ scale: 0 }}
                 animate={controls}
                 variants={{

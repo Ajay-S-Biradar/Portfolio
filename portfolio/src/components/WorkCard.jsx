@@ -7,7 +7,7 @@ const WorkCard = ({work,time}) => {
     const [active,setActive] = useState(false);
   return (
     <motion.div 
-    className={`${active?"bg-black ":"bg-[#fcf6f4] "} ' flex justify-evenly flex-col w-80 border border-[#fcf6f4] rounded-bl-[20%] rounded-tr-[20%] h-96 m-2 px-6 py-4 '`}
+    className={`${active?"bg-black ":"bg-[#fcf6f4] "} ' flex justify-evenly flex-col w-72 md:w-80 border border-[#fcf6f4] rounded-bl-[20%] rounded-tr-[20%] h-96 m-2 px-6 py-4 '`}
         onMouseEnter={()=>{
             setActive(true);
         }}
@@ -36,7 +36,7 @@ const WorkCard = ({work,time}) => {
             </h2>
         </div>
         <hr className='h-[2px] bg-gray-600'/>
-        <div className='flex gap-5 flex-wrap'>
+        <div className='flex gap-5 flex-wrap mb-8 md:mb-0'>
             {hashTags.map((hash,ind)=>{
                 return <h3 key={ind} className={`" font-semibold "${active?" text-[#fcf6f4] ":"text-black "}`}>{hash}</h3>
             })}

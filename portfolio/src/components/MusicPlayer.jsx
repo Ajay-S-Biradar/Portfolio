@@ -6,7 +6,7 @@ const CD = ({color}) => {
   return (
     
     <motion.svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-    className="w-10 h-auto md:w-32 overflow-hidden origin-center"
+    className="w-10 h-auto md:w-24 overflow-hidden origin-center"
     initial={{
     }}
     animate={{
