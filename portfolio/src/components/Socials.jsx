@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Socials = ({color}) => {
   return (
-    <div className='fixed z-20 flex flex-col bottom-0 items-center justify-center mx-8 gap-6'>
+    <div className='fixed z-20 flex flex-col bottom-0 items-center justify-center mx-2 md:mx-8 gap-6'>
       <div className='flex flex-col gap-6'>
         {socialItems.map((item, index) => (
           <a href={item.link} target='_blank' >

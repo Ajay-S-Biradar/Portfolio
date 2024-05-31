@@ -37,7 +37,7 @@ const AppRouter = createBrowserRouter([
       },
       {
         path: '/skills',
-        element: <MySkills />
+        element:<MySkills />
       },
       {
         path: '/aboutme',

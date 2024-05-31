@@ -54,13 +54,13 @@ const Navbar = () => {
 
     return (
         <>
-        <div className='absolute z-40 flex justify-between w-full overflow-hidden'>
+        <div className='absolute z-40 flex flex-col md:flex-row justify-between w-full overflow-hidden'>
             <Link to={'/'}>
-            <h1 className='font-name text-4xl mx-8 my-5 p-3' style={{ color: color }}>AB</h1>
+            <h1 className='font-name text-3xl md:text-4xl md:mx-8 md:my-5 p-2 md:p-3' style={{ color: color }}>AB</h1>
             </Link>
             <motion.div
                 onClick={handleClick}
-                className='origin-[40%_40%]'
+                className='h-10 md:h-32 m-2 md:m-5'
                 initial={{ scale: 0 }}
                 animate={controls}
                 variants={{
