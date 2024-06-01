@@ -19,8 +19,10 @@ const AboutMe = () => {
   }
 
   return (
-    <div className='bg-black h-[100vh] text-[#fcf6f4] flex justify-center items-center gap-3' >
-      <motion.div className='relative flex h-2/3 w-1/2 flex-col  justify-center px-10 gap-6 origin-top'>
+    <div className='bg-black h-[100vh] w-screen text-[#fcf6f4] flex flex-col-reverse justify-center  md:flex-row md:justify-center md:items-center gap-3 overflow-y-scroll overflow-x-hidden' >
+      {/* extra */}
+      <div className='h-40'></div>
+      <motion.div className='relative flex md:h-2/3 md:w-1/2 md:flex-col justify-center items-center md:px-10 gap-6 origin-top mx-[10%] md:m-0'>
         {/* the line animation */}
         <motion.div className='absolute top-0 right-0 w-full h-1 bg-[#fcf6f4] origin-right'
         initial={{
@@ -47,8 +49,9 @@ const AboutMe = () => {
         }}
         ></motion.div>
 
+        {/* the info */}
         <motion.div
-        className='origin-top'
+        className='origin-top p-[3%] relative text-xl md:text-2xl font-work md:tracking-wide font-medium'
         initial={{
           scaleY:0
         }}
@@ -61,20 +64,23 @@ const AboutMe = () => {
           ease:"easeInOut"
         }}
         >
-          <div className='text-2xl font-work tracking-wide font-medium'>
+          <div>
           I'm an engineering student at The National Institute of Engineering, Mysuru, specializing in Computer Science. Hailing from Bijapur, I have a deep passion for technology and an innate curiosity that drives my academic and personal pursuits.
           </div>
-          <div className='text-2xl font-work tracking-wide font-medium'>
+          <div>
           I'm good at web development and enjoy making websites and web apps. I'm always enthusiastic about my work and love to explore different tech fields.
           </div>
-          <div className='text-2xl font-work tracking-wide font-medium'>
+          <div>
           In my free time, I love to dance, play chess, and tackle coding challenges. These hobbies not only keep me engaged and active but also enhance my problem-solving abilities and creativity.
           </div>
         </motion.div>
+
       </motion.div>
+
+      {/* image and hey */}
       <div className='relative'>
       <motion.div
-      className='origin-bottom'
+      className='origin-bottom flex w-full justify-end'
         onClick={handleClick}
         initial={{  
           rotate:0,
@@ -93,10 +99,10 @@ const AboutMe = () => {
           scale:.9
         }}
       >
-          <img src="avatar.png" alt="" />
+          <img className='h-36 md:h-auto' src="avatar.png" alt="" />
       </motion.div>
-          <motion.div 
-          className={`' origin-bottom-right absolute top-20 left-20 '${hi? "  ":" hidden "}`}
+      <motion.div 
+          className={`' origin-bottom-right md:h-auto md:w-auto top-0 left-[70%] absolute md:top-20 md:left-20 '${hi? "  ":" hidden "}`}
           initial={{
             rotate:50,
             scale:0
@@ -109,8 +115,10 @@ const AboutMe = () => {
             duration:1,
             type:"spring"
           }}
-          ><img src="hello.png" className='h-20'l alt="" /></motion.div>
+          ><img src="hello.png" className='h-10 md:h-20'l alt="" />
+      </motion.div>
       </div>
+      {/* <div className='h-40'></div> */}
     </div>
   )
 }
