@@ -4,8 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
 body{
+    max-width: 100%;
+    max-height: 100%;
     overflow: hidden;
+    
 }
 ::-webkit-scrollbar {
     display: none;

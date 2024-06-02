@@ -1,7 +1,6 @@
 import './App.css';
 import { Outlet, RouterProvider, createBrowserRouter, useLocation, useOutlet } from 'react-router-dom';
 import Home from './pages/Home';
-import Socials from './components/Socials';
 import Navbar from './components/Navbar';
 import MySkills from './pages/MySkills';
 import { AnimatePresence } from 'framer-motion';

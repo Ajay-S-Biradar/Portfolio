@@ -11,7 +11,7 @@ const HomeBottomLinks = () => {
         navigate('/aboutme');
     }
   return (
-    <motion.div className='absolute w-full bottom-0 flex justify-evenly text-xl font-medium origin-bottom'
+    <motion.div className='absolute w-full bottom-0 flex justify-evenly text-lg md:text-xl font-medium origin-bottom'
       initial={{
         scaleY:0,
       }}
@@ -23,7 +23,7 @@ const HomeBottomLinks = () => {
         times:[0,.5,1]
       }}
       >
-        <motion.div className='text-[#fcf6f4] m-3 p-3 cursor-pointer'
+        <motion.div className='text-[#000000] md:text-[#fcf6f4] m-3 p-3 cursor-pointer'
         onClick={handleSkills}
         whileHover={{
           scale:1.2

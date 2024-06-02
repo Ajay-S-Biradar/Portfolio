@@ -3,14 +3,16 @@ import CD from './MusicPlayer';
 import { motion, useAnimationControls } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import Socials from './Socials';
+import { useMediaQuery } from 'react-responsive';
 
 const Navbar = () => {
     const location = useLocation();
     const [color, setColor] = useState("#fcf6f4");
-    const [cdColor,setCdColor] = useState("#000000");
+    const [cdColor,setCdColor] = useState("#fcf6f4");
     const controls = useAnimationControls();
     const [play, setPlay] = useState(false);
     const [audio] = useState(new Audio('sound.mp3'));
+    const isMobile = useMediaQuery({maxWidth: 767});
 
     useEffect(() => {
         const handleEnded = () => {
@@ -32,7 +34,8 @@ const Navbar = () => {
             setCdColor("#000000");
         } else if(location.pathname === "/"){
             setColor("#fcf6f4");
-            setCdColor("#000000");
+            if(!isMobile)
+                setCdColor("#000000");
         }
         else{
             setColor("#fcf6f4");
