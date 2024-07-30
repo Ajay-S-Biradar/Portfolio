@@ -2,8 +2,7 @@ import React, { act, useState } from 'react'
 import { motion } from 'framer-motion';
 
 const WorkCard = ({work,time}) => {
-    const {title,desp,hashTags} = work;
-    console.log(time);
+    const {header,desc,tags} = work;
     const [active,setActive] = useState(false);
   return (
     <motion.div 
@@ -27,18 +26,18 @@ const WorkCard = ({work,time}) => {
     >
         <div className='flex justify-center w-full'>
             <h1 className={`" font-semibold text-4xl "${active?" text-[#fcf6f4] ":"text-black "}`}>
-                {title}
+                {header}
             </h1>
         </div>
         <div>
             <h2 className={`" font-work text-xl " ${active?"text-[#fcf6f4] ":" text-black "}''`}>
-                {desp}
+                {desc}
             </h2>
         </div>
         <hr className='h-[2px] bg-gray-600'/>
         <div className='flex gap-5 flex-wrap mb-8 md:mb-0'>
-            {hashTags.map((hash,ind)=>{
-                return <h3 key={ind} className={`" font-semibold "${active?" text-[#fcf6f4] ":"text-black "}`}>{hash}</h3>
+            {tags.map((hash,ind)=>{
+                return <h3 key={ind} className={`" font-semibold "${active?" text-[#fcf6f4] ":"text-black "}`}>#{hash}</h3>
             })}
         </div>
     </motion.div>

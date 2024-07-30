@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import {useMediaQuery} from 'react-responsive'
+import axios from 'axios'
+import { API_URL } from '../constants/util'
 
 const HomeDividerLine = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
+  const [intro,setIntro] = useState([]);
+  useEffect(()=>{
+    fetchData();
+  },[])
+
+  const fetchData = async ()=>{
+    const res = await axios.get(API_URL+'intro');
+    console.log(res.data);
+    setIntro(res.data[0]);
+  }
     const navigate = useNavigate();
     
     const handleClick = ()=>{
@@ -33,9 +45,9 @@ const HomeDividerLine = () => {
             >
               <div className='flex'>
                 <div className='flex h-72 md:h-96 gap-3 flex-col justify-center md:items-start border md:border-r-0 border-[#fcf6f4] text-[#fcf6f4] px-2 md:p-6'>
-                  <div className='m-1 py-2 md:p-2 text-3xl md:text-7xl font-extrabold font-serif'>Hoi</div>
-                  <div className='m-1 py-2 md:p-2 text-2xl md:text-5xl font-semibold  font-serif'>I'm Ajay</div>
-                  <div className='m-1 py-2 md:p-2 text-xl md:text-4xl font-semibold text-gray-400  font-serif'>I'm good at development.</div>
+                  <div className='m-1 py-2 md:p-2 text-3xl md:text-7xl font-extrabold font-serif'>{intro?.greet}</div>
+                  <div className='m-1 py-2 md:p-2 text-2xl md:text-5xl font-semibold  font-serif'>{intro?.intro}</div>
+                  <div className='m-1 py-2 md:p-2 text-xl md:text-4xl font-semibold text-gray-400  font-serif'>{intro?.info}</div>
                 </div>
               </div>
             </motion.div>
