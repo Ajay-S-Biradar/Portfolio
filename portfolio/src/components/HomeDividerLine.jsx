@@ -15,7 +15,7 @@ const HomeDividerLine = () => {
 
   const fetchData = async ()=>{
     const res = await axios.get(API_URL+'intro');
-    console.log(res.data);
+    // console.log("INtro",res.data);
     setIntro(res.data[0]);
   }
     const navigate = useNavigate();
