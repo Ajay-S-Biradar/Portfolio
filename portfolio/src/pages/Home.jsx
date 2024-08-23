@@ -8,7 +8,7 @@ import HomeBottomLinks from '../components/HomeBottomLinks'
 const Home = () => {
 
   return (
-    <motion.div className='h-screen w-screen md:w-[100hw] md:h-[100vh] flex flex-col md:flex-row bg-red-500 overflow-hidden'
+    <motion.div className='h-screen w-screen md:w-[100hw] md:h-[100vh] flex flex-col md:flex-row overflow-hidden'
       initial={{
         scale:1
       }}
