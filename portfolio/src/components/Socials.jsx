@@ -27,7 +27,7 @@ const Socials = ({color}) => {
       <motion.div
         className={`" w-[3px] "${color=="#000000"?" bg-[#000000] ":" bg-[#fcf6f4] "}`}
         initial={{ height: 0 }}
-        animate={{ height: 150 }}
+        animate={{ height: 100 }}
         transition={{ ease: "easeInOut", duration: 1.5 }}
       ></motion.div>
     </div>

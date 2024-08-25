@@ -51,7 +51,7 @@ const AboutMe = () => {
 
         {/* the info */}
         <motion.div
-        className='origin-top p-[3%] relative text-xl md:text-2xl font-work md:tracking-wide font-medium'
+        className='origin-top p-[3%] relative text-xl md:text-2xl font-work md:tracking-wide font-medium overflow-visible'
         initial={{
           scaleY:0
         }}
@@ -99,7 +99,7 @@ const AboutMe = () => {
           scale:.9
         }}
       >
-          <img className='h-36 md:h-auto' src="avatar.png" alt="" />
+          <img className='h-28 md:h-auto' src="avatar.png" alt="" />
       </motion.div>
       <motion.div 
           className={`' origin-bottom-right md:h-auto md:w-auto top-0 left-[70%] absolute md:top-20 md:left-20 '${hi? "  ":" hidden "}`}
