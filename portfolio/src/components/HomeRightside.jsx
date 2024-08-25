@@ -21,7 +21,7 @@ const HomeRightside = () => {
         }}
         >
           <div className='flex'>
-            <div className='flex w-[70vw] h-72 md:h-96 md:w-[450px] border-t-0 md:border-t-2 md:border-l-0 border-2 border-black relative'>
+            <div className='flex w-60 h-72 md:h-96 md:w-[450px] border-t-0 md:border-t-2 md:border-l-0 border-2 border-black relative'>
               <motion.img className='absolute bottom-0' src="avatar.png" alt="" 
                 initial={{
                   scale:0

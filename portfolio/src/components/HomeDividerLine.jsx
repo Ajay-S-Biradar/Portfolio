@@ -44,7 +44,7 @@ const HomeDividerLine = () => {
               }}
             >
               <div className='flex'>
-                <div className='flex h-72 md:h-96 gap-3 flex-col justify-center md:items-start border md:border-r-0 border-[#fcf6f4] text-[#fcf6f4] px-2 md:p-6'>
+                <div className='flex h-72 w-60 md:w-auto md:h-96 gap-3 flex-col justify-center md:items-start border md:border-r-0 border-[#fcf6f4] text-[#fcf6f4] px-2 md:p-6'>
                   <div className='m-1 py-2 md:p-2 text-3xl md:text-7xl font-extrabold font-serif'>{intro?.greet}</div>
                   <div className='m-1 py-2 md:p-2 text-2xl md:text-5xl font-semibold  font-serif'>{intro?.intro}</div>
                   <div className='m-1 py-2 md:p-2 text-xl md:text-4xl font-semibold text-gray-400  font-serif'>{intro?.info}</div>
