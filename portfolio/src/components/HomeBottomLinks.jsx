@@ -23,7 +23,7 @@ const HomeBottomLinks = () => {
         times:[0,.5,1]
       }}
       >
-        <motion.div className='text-[#000000] md:text-[#fcf6f4] m-3 p-3 cursor-pointer'
+        <motion.div className='text-[#000000] md:text-[#fcf6f4] p-1 m-1 md:m-3 md:p-3 cursor-pointer'
         onClick={handleSkills}
         whileHover={{
           scale:1.2
@@ -38,7 +38,7 @@ const HomeBottomLinks = () => {
         >
           My Skills
         </motion.div>
-        <motion.div className='m-3 p-3 cursor-pointer'
+        <motion.div className='m-1 p-1 md:m-3 md:p-3 cursor-pointer'
         onClick={handleAbout}
         whileHover={{
           scale:1.2
